@@ -1,0 +1,51 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Product } from '../../types';
+import { useCartStore } from '../../store/cartStore';
+
+interface ProductCardProps {
+  product: Product;
+}
+
+export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const addItem = useCartStore((state) => state.addItem);
+
+  const handleAddToCart = () => {
+    addItem({
+      product,
+      quantity: 1,
+      size: product.sizes[0] // Adiciona com o primeiro tamanho disponível
+    });
+  };
+
+  return (
+    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+      <Link to={`/produto/${product.id}`}>
+        <img 
+          src={product.imageUrl} 
+          alt={product.name}
+          className="w-full h-48 object-cover"
+        />
+      </Link>
+      <div className="p-4">
+        <Link to={`/produto/${product.id}`}>
+          <h3 className="text-lg font-semibold text-gray-800 hover:text-blue-600">
+            {product.name}
+          </h3>
+        </Link>
+        <p className="text-sm text-gray-600 mt-1">{product.description}</p>
+        <div className="mt-4 flex items-center justify-between">
+          <span className="text-lg font-bold text-gray-900">
+            R$ {product.price.toFixed(2)}
+          </span>
+          <button
+            onClick={handleAddToCart}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
