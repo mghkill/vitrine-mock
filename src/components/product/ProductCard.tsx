@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Product } from '../../types';
-import { useCartStore } from '../../store/cartStore';
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Product } from "../../types";
+import { useCartStore } from "../../store/cartStore";
 
 interface ProductCardProps {
   product: Product;
@@ -10,19 +10,20 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const addItem = useCartStore((state) => state.addItem);
 
+  const navigate = useNavigate();
   const handleAddToCart = () => {
     addItem({
       product,
       quantity: 1,
-      size: product.sizes[0] // Adiciona com o primeiro tamanho disponível
+      size: product.sizes[0], // Adiciona com o primeiro tamanho disponível
     });
   };
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <Link to={`/produto/${product.id}`}>
-        <img 
-          src={product.imageUrl} 
+        <img
+          src={product.imageUrl}
           alt={product.name}
           className="w-full h-48 object-cover"
         />
@@ -39,7 +40,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             R$ {product.price.toFixed(2)}
           </span>
           <button
-            onClick={handleAddToCart}
+            onClick={() => {
+              handleAddToCart();
+              navigate("/cart");
+            }}
             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
             Adicionar ao Carrinho
