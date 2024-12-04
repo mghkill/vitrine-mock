@@ -27,6 +27,18 @@ const initialProducts: Product[] = [
   {
     id: "2",
     name: "Casaco de Inverno Premium",
+    price: 289.9,
+    description: "Casaco térmico para dias frios, com acabamento premium",
+    imageUrl:
+      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
+    category: "inverno",
+    sizes: ["M", "G", "GG"],
+    discount: 10,
+    inStock: true,
+  },
+  {
+    id: "3",
+    name: "Casaco de 3",
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
@@ -37,31 +49,19 @@ const initialProducts: Product[] = [
     inStock: true,
   },
   {
-    id: "2",
-    name: "Casaco de Inverno Premium",
+    id: "4",
+    name: "Casaco de 2",
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
       "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
     category: "inverno",
     sizes: ["M", "G", "GG"],
-    discount: 10,
+    discount: 12,
     inStock: true,
   },
   {
-    id: "2",
-    name: "Casaco de Inverno Premium",
-    price: 299.9,
-    description: "Casaco térmico para dias frios, com acabamento premium",
-    imageUrl:
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
-    category: "inverno",
-    sizes: ["M", "G", "GG"],
-    discount: 10,
-    inStock: true,
-  },
-  {
-    id: "2",
+    id: "5",
     name: "Casaco de Inverno Premium",
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",

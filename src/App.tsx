@@ -10,6 +10,7 @@ import { CategoryProducts } from './pages/CategoryProducts';
 import { ProductDetails } from './pages/ProductDetails';
 import { Cart } from './pages/Cart';
 import { useAuthStore } from './store/authStore';
+import { Checkout } from './pages/Checkout';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user, isAuthenticated } = useAuthStore();
@@ -33,6 +34,7 @@ function App() {
           <Route path="/categoria/:slug" element={<CategoryProducts />} />
           <Route path="/produto/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/admin" element={
             <ProtectedRoute>
               <AdminDashboard />

@@ -30,7 +30,7 @@ export const CategoryProducts = () => {
           <ProductCard
             key={product.id}
             product={product}
-            onAddToCart={() => {/* Implementar lógica do carrinho */}}
+          
           />
         ))}
       </div>

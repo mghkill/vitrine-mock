@@ -11,35 +11,44 @@ interface CartState {
 }
 
 export const useCartStore = create<CartState>((set, get) => ({
-  items: [],
+  items: JSON.parse(localStorage.getItem('cartItems') || '[]'), // Recupera os itens salvos no localStorage, ou um array vazio
   addItem: (newItem) => set((state) => {
     const existingItem = state.items.find(
       item => item.product.id === newItem.product.id && item.size === newItem.size
     );
 
+    let updatedItems;
     if (existingItem) {
-      return {
-        items: state.items.map(item =>
-          item.product.id === newItem.product.id && item.size === newItem.size
-            ? { ...item, quantity: item.quantity + newItem.quantity }
-            : item
-        )
-      };
+      updatedItems = state.items.map(item =>
+        item.product.id === newItem.product.id && item.size === newItem.size
+          ? { ...item, quantity: item.quantity + newItem.quantity }
+          : item
+      );
+    } else {
+      updatedItems = [...state.items, newItem];
     }
 
-    return { items: [...state.items, newItem] };
+    localStorage.setItem('cartItems', JSON.stringify(updatedItems)); // Salva os itens no localStorage
+    return { items: updatedItems };
   }),
-  removeItem: (productId) => set((state) => ({
-    items: state.items.filter(item => item.product.id !== productId)
-  })),
-  updateQuantity: (productId, quantity) => set((state) => ({
-    items: state.items.map(item =>
+  removeItem: (productId) => set((state) => {
+    const updatedItems = state.items.filter(item => item.product.id !== productId);
+    localStorage.setItem('cartItems', JSON.stringify(updatedItems)); // Atualiza o localStorage
+    return { items: updatedItems };
+  }),
+  updateQuantity: (productId, quantity) => set((state) => {
+    const updatedItems = state.items.map(item =>
       item.product.id === productId
         ? { ...item, quantity }
         : item
-    )
-  })),
-  clearCart: () => set({ items: [] }),
+    );
+    localStorage.setItem('cartItems', JSON.stringify(updatedItems)); // Atualiza o localStorage
+    return { items: updatedItems };
+  }),
+  clearCart: () => set(() => {
+    localStorage.removeItem('cartItems'); // Remove do localStorage
+    return { items: [] };
+  }),
   getTotal: () => {
     return get().items.reduce((total, item) => {
       const price = item.product.discount

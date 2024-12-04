@@ -7,13 +7,15 @@ interface ProductFormProps {
 }
 
 export const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
-  const [formData, setFormData] = useState({
-    name: initialData?.name || '',
-    price: initialData?.price || 0,
-    description: initialData?.description || '',
-    imageUrl: initialData?.imageUrl || '',
-    category: initialData?.category || ''
-  });
+ const [formData, setFormData] = useState({
+  name: initialData?.name || '',
+  price: initialData?.price || 0,
+  description: initialData?.description || '',
+  imageUrl: initialData?.imageUrl || '',
+  category: initialData?.category || '',
+  sizes: initialData?.sizes || [''], // add default value for sizes
+  inStock: initialData?.inStock || true // add default value for inStock
+});
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

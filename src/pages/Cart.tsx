@@ -1,4 +1,3 @@
-import React from 'react';
 import { useCartStore } from '../store/cartStore';
 import { Trash2, MinusCircle, PlusCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
