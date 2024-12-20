@@ -12,12 +12,18 @@ interface CategoryState {
 const initialCategories: Category[] = [
   {
     id: '1',
+    name: 'Todos',
+    slug: 'todos',
+    description: 'Todas as categorias'
+  },
+  {
+    id: '2',
     name: 'Esporte',
     slug: 'esporte',
     description: 'Roupas esportivas para todas as atividades'
   },
   {
-    id: '2',
+    id: '3',
     name: 'Inverno',
     slug: 'inverno',
     description: 'Roupas para os dias mais frios'

@@ -39,15 +39,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <span className="text-lg font-bold text-gray-900">
             R$ {product.price.toFixed(2)}
           </span>
-          <button
-            onClick={() => {
-              handleAddToCart();
-              navigate("/cart");
-            }}
+          <Link
+            to={`/produto/${product.id}`}
             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
-            Adicionar ao Carrinho
-          </button>
+            Detalhes do Produto
+          </Link>
         </div>
       </div>
     </div>

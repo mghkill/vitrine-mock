@@ -13,6 +13,7 @@ export const ProductManagement = () => {
       ...productData,
       id: Date.now().toString(),
     };
+    console.log(newProduct)
     addProduct(newProduct);
   };
 

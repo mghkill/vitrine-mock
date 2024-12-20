@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCategoryStore } from '../../store/categoryStore';
 
@@ -12,7 +11,7 @@ export const CategoryList = () => {
           {categories.map((category) => (
             <Link
               key={category.id}
-              to={`/categoria/${category.slug}`}
+              to={category.slug === 'todos' ? `/` : `/categoria/${category.slug}`}
               className="text-gray-600 hover:text-gray-900 font-medium"
             >
               {category.name}
