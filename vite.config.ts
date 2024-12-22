@@ -5,6 +5,12 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 export default defineConfig({
   plugins: [
     react(),
+    {
+      name: 'html-transform',
+      transformIndexHtml(html) {
+        return html.replace(/<title>.*<\/title>/, '<title>Loja Vitrine</title>');
+      },
+    },
     viteStaticCopy({
       targets: [
         {
