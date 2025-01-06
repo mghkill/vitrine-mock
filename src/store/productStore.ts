@@ -18,7 +18,7 @@ const initialProducts: Product[] = [
     description:
       "Camiseta esportiva de alta performance, ideal para atividades físicas",
     imageUrl:
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
+      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
     category: "esporte",
     sizes: ["P", "M", "G", "GG"],
     discount: 0,
@@ -30,7 +30,7 @@ const initialProducts: Product[] = [
     price: 289.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
+      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
     category: "inverno",
     sizes: ["M", "G", "GG"],
     discount: 10,
@@ -42,7 +42,7 @@ const initialProducts: Product[] = [
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
+      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
     category: "inverno",
     sizes: ["M", "G", "GG"],
     discount: 10,
@@ -54,7 +54,7 @@ const initialProducts: Product[] = [
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
+      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
     category: "inverno",
     sizes: ["M", "G", "GG"],
     discount: 12,
@@ -66,7 +66,7 @@ const initialProducts: Product[] = [
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
+      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
     category: "inverno",
     sizes: ["M", "G", "GG"],
     discount: 10,

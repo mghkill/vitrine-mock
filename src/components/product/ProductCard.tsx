@@ -1,32 +1,41 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link /* useNavigate */ } from "react-router-dom";
 import { Product } from "../../types";
-import { useCartStore } from "../../store/cartStore";
+/* import { useCartStore } from "../../store/cartStore"; */
 
 interface ProductCardProps {
   product: Product;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const addItem = useCartStore((state) => state.addItem);
+  /*   const addItem = useCartStore((state) => state.addItem); */
 
-  const navigate = useNavigate();
-  const handleAddToCart = () => {
+  /*   const navigate = useNavigate(); */
+  /*   const handleAddToCart = () => {
     addItem({
       product,
       quantity: 1,
       size: product.sizes[0], // Adiciona com o primeiro tamanho disponível
     });
-  };
+  }; */
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <Link to={`/produto/${product.id}`}>
-        <img
-          src={product.imageUrl}
-          alt={product.name}
-          className="w-full h-48 object-cover"
-        />
+        <div
+          className="iframe-container"
+          style={{ position: "relative", overflow: "hidden" }}
+        >
+          <iframe
+            src={product.imageUrl}
+            width="100%"
+            height="480"
+            frameBorder="0"
+            style={{
+              pointerEvents: "none",
+              border: "none",
+            }}
+          ></iframe>
+        </div>
       </Link>
       <div className="p-4">
         <Link to={`/produto/${product.id}`}>

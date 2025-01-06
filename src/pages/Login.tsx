@@ -17,7 +17,7 @@ export const Login = () => {
     setError('');
 
     // Credenciais do administrador
-    if (formData.email === 'admin@mail.com' && formData.password === 'admin') {
+    if (formData.email === 'admin@admin' && formData.password === 'admin') {
       login({
         id: '1',
         email: formData.email,
