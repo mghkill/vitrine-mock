@@ -44,26 +44,7 @@ export const ProductDetails = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="iframe-container" style={{ position: "relative" }}>
-          <iframe
-            style={{ pointerEvents: true ? "none" : "auto" }}
-            src={product.imageUrl}
-            width="100%"
-            height="480"
-            allow="autoplay"
-          ></iframe>
-          {/* Camada invisível para bloquear interações no mobile */}
-          {true && (
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                background: "transparent",
-              }}
-            ></div>
-          )}
+          <img src={product.imageUrl} width="680" height="480" />
         </div>
 
         <div className="space-y-6">

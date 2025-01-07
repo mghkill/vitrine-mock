@@ -21,21 +21,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <Link to={`/produto/${product.id}`}>
-        <div
-          className="iframe-container"
-          style={{ position: "relative", overflow: "hidden" }}
-        >
-          <iframe
-            src={product.imageUrl}
-            width="100%"
-            height="480"
-            frameBorder="0"
-            style={{
-              pointerEvents: "none",
-              border: "none",
-            }}
-          ></iframe>
-        </div>
+        <img src={product.imageUrl} width="680" height="480" />
       </Link>
       <div className="p-4">
         <Link to={`/produto/${product.id}`}>

@@ -18,7 +18,7 @@ const initialProducts: Product[] = [
     description:
       "Camiseta esportiva de alta performance, ideal para atividades físicas",
     imageUrl:
-      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
     category: "esporte",
     sizes: ["P", "M", "G", "GG"],
     discount: 0,
@@ -30,7 +30,7 @@ const initialProducts: Product[] = [
     price: 289.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
-      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/r8tpgs9-69611169236149a31516521949612638-1024-1024.jpg",
     category: "inverno",
     sizes: ["M", "G", "GG"],
     discount: 10,
@@ -42,7 +42,7 @@ const initialProducts: Product[] = [
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
-      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/jlcq4ck-d10a3833cbb323632b16522036768118-1024-1024.webp",
     category: "inverno",
     sizes: ["M", "G", "GG"],
     discount: 10,
@@ -54,7 +54,7 @@ const initialProducts: Product[] = [
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
-      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
     category: "inverno",
     sizes: ["M", "G", "GG"],
     discount: 12,
@@ -66,7 +66,7 @@ const initialProducts: Product[] = [
     price: 299.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
-      "https://drive.google.com/file/d/1fB2JqUQUJPNkdLw98EAPHyOJ69Lqnx_m/preview",
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
     category: "inverno",
     sizes: ["M", "G", "GG"],
     discount: 10,
