@@ -27,7 +27,7 @@ const initialProducts: Product[] = [
   {
     id: "2",
     name: "Casaco de Inverno Premium",
-    price: 289.9,
+    price: 70.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
       "https://acdn.mitiendanube.com/stores/002/037/298/products/r8tpgs9-69611169236149a31516521949612638-1024-1024.jpg",
@@ -39,7 +39,7 @@ const initialProducts: Product[] = [
   {
     id: "3",
     name: "Casaco de 3",
-    price: 299.9,
+    price: 120.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
       "https://acdn.mitiendanube.com/stores/002/037/298/products/jlcq4ck-d10a3833cbb323632b16522036768118-1024-1024.webp",
@@ -51,7 +51,7 @@ const initialProducts: Product[] = [
   {
     id: "4",
     name: "Casaco de 2",
-    price: 299.9,
+    price: 98.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
       "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
@@ -63,7 +63,19 @@ const initialProducts: Product[] = [
   {
     id: "5",
     name: "Casaco de Inverno Premium",
-    price: 299.9,
+    price: 125.9,
+    description: "Casaco térmico para dias frios, com acabamento premium",
+    imageUrl:
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
+    category: "inverno",
+    sizes: ["M", "G", "GG"],
+    discount: 10,
+    inStock: true,
+  },
+  {
+    id: "6",
+    name: "Casaco de Inverno Premium",
+    price: 77.9,
     description: "Casaco térmico para dias frios, com acabamento premium",
     imageUrl:
       "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
