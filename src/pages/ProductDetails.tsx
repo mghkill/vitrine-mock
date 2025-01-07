@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useProductStore } from "../store/productStore";
 import { useCartStore } from "../store/cartStore";
@@ -43,7 +43,7 @@ export const ProductDetails = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="iframe-container" style={{ position: "relative" }}>
+        <div>
           <img src={product.imageUrl} width="680" height="480" />
         </div>
 
