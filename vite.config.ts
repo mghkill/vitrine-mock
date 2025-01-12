@@ -22,6 +22,7 @@ export default defineConfig({
   ],
   optimizeDeps: {
     exclude: ['lucide-react'],
+    include: ["react-slick"]
   },
   build: {
     outDir: 'dist',

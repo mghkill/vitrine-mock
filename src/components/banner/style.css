@@ -1,0 +1,15 @@
+.slick-slide {
+    display: flex !important; /* Garante que os itens sejam exibidos em bloco */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-list {
+    overflow: hidden; /* Evita que as imagens "escapem" do slider */
+  }
+  
+  .slick-slide img {
+    width: 100%; /* Faz com que as imagens ocupem toda a largura disponível */
+    height: auto; /* Preserva as proporções das imagens */
+    border-radius: 8px; /* Adiciona bordas arredondadas (opcional) */
+  }
