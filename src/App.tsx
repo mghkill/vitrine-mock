@@ -12,7 +12,6 @@ import { Cart } from "./pages/Cart";
 import { useAuthStore } from "./store/authStore";
 import { Checkout } from "./pages/Checkout";
 import { Footer } from "./components/layout/Footer";
- 
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user, isAuthenticated } = useAuthStore();
@@ -34,30 +33,32 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Header />
         <CategoryList />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/categoria/:slug" element={<CategoryProducts />} />
-          <Route path="/produto/:id" element={<ProductDetails />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route
-            path="/admin"
-            element={
-              <ProtectedRoute>
-                <AdminDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/admin/products"
-            element={
-              <ProtectedRoute>
-                <ProductManagement />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
+        <div style={{ minHeight: "680px"}}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/categoria/:slug" element={<CategoryProducts />} />
+            <Route path="/produto/:id" element={<ProductDetails />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/products"
+              element={
+                <ProtectedRoute>
+                  <ProductManagement />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>
