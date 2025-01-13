@@ -12,7 +12,7 @@ import { Cart } from "./pages/Cart";
 import { useAuthStore } from "./store/authStore";
 import { Checkout } from "./pages/Checkout";
 import { Footer } from "./components/layout/Footer";
-import { Banner } from "./components/banner/Banner";
+ 
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user, isAuthenticated } = useAuthStore();
@@ -34,7 +34,6 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Header />
         <CategoryList />
-        <Banner />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

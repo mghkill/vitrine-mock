@@ -1,7 +1,8 @@
-import { useParams } from 'react-router-dom';
-import { ProductCard } from '../components/product/ProductCard';
-import { useProductStore } from '../store/productStore';
-import { useCategoryStore } from '../store/categoryStore';
+import { useParams } from "react-router-dom";
+import { ProductCard } from "../components/product/ProductCard";
+import { useProductStore } from "../store/productStore";
+import { useCategoryStore } from "../store/categoryStore";
+import { Banner } from "../components/banner/Banner";
 
 export const CategoryProducts = () => {
   const { slug } = useParams();
@@ -20,19 +21,20 @@ export const CategoryProducts = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-4">{category.name}</h1>
-      <p className="text-gray-600 mb-8">{category.description}</p>
+    <>
+      <Banner />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          {category.name}
+        </h1>
+        <p className="text-gray-600 mb-8">{category.description}</p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {categoryProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-          
-          />
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categoryProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
