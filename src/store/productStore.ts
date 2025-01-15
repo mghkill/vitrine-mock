@@ -84,6 +84,54 @@ const initialProducts: Product[] = [
     discount: 10,
     inStock: true,
   },
+  {
+    id: "7",
+    name: "Casaco de Inverno Premium",
+    price: 77.9,
+    description: "Casaco térmico para dias frios, com acabamento premium",
+    imageUrl:
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
+    category: "inverno",
+    sizes: ["M", "G", "GG"],
+    discount: 10,
+    inStock: true,
+  },
+  {
+    id: "8",
+    name: "Casaco de Inverno Premium",
+    price: 77.9,
+    description: "Casaco térmico para dias frios, com acabamento premium",
+    imageUrl:
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
+    category: "inverno",
+    sizes: ["M", "G", "GG"],
+    discount: 10,
+    inStock: true,
+  },
+  {
+    id: "9",
+    name: "Casaco de Inverno Premium",
+    price: 77.9,
+    description: "Casaco térmico para dias frios, com acabamento premium",
+    imageUrl:
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
+    category: "inverno",
+    sizes: ["M", "G", "GG"],
+    discount: 10,
+    inStock: true,
+  },
+  {
+    id: "10",
+    name: "Casaco de Inverno Premium",
+    price: 77.9,
+    description: "Casaco térmico para dias frios, com acabamento premium",
+    imageUrl:
+      "https://acdn.mitiendanube.com/stores/002/037/298/products/xbre5bx-ffa4648aefc181228216522036710621-1024-1024.webp",
+    category: "inverno",
+    sizes: ["M", "G", "GG"],
+    discount: 10,
+    inStock: true,
+  },
 ];
 
 export const useProductStore = create<ProductState>((set, get) => ({
